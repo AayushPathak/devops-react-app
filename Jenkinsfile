@@ -1,14 +1,9 @@
 pipeline {
-  agent {
-    dockerfile {
-      filename 'Dockerfile.dev'
-    }
-
-  }
+  agent none
   stages {
-    stage('') {
+    stage('error') {
       steps {
-        sh 'docker build -f Dockerfile.dev .'
+        sh 'docker version'
       }
     }
 
