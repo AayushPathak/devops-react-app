@@ -6,9 +6,9 @@ pipeline {
 
   }
   stages {
-    stage('error') {
+    stage('test') {
       steps {
-        sh 'docker version'
+        sh 'npm run test'
       }
     }
 
