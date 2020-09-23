@@ -9,7 +9,13 @@ pipeline {
 
     stage('Run test') {
       steps {
-        sh 'docker run aayushpathak/node-test npm run test -- --coverage'
+        sh 'docker run --name npm_test aayushpathak/node-test npm run test -- --coverage'
+      }
+    }
+
+    stage('Cleanup') {
+      steps {
+        sh 'docker stop npm_test && docker rm npm_test'
       }
     }
 
