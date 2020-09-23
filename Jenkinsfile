@@ -9,7 +9,7 @@ pipeline {
 
     stage('Run test') {
       steps {
-        sh 'docker run --name npm_test aayushpathak/node-test npm run test -- --coverage'
+        sh 'docker run -e CI=true --name npm_test aayushpathak/node-test npm run test -- --coverage'
       }
     }
 
