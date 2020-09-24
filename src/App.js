@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Jenkins trigger test #5
+          Jenkins trigger test #6
         </p>
         <a
           className="App-link"
